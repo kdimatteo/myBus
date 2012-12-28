@@ -1,0 +1,660 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"main",
+				"mainNav"
+			],
+			[
+				"times",
+				"timesContainer"
+			],
+			[
+				"rout",
+				"routeID"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"tie",
+				"timesView"
+			],
+			[
+				"new",
+				"newView"
+			],
+			[
+				"timesC",
+				"timesContainer"
+			],
+			[
+				"get",
+				"getHours"
+			],
+			[
+				"App",
+				"AppRouter"
+			],
+			[
+				"TIMES",
+				"TimesView"
+			],
+			[
+				"Times",
+				"TimesView"
+			],
+			[
+				"show",
+				"showOutbound"
+			],
+			[
+				"pre",
+				"predictionURL"
+			],
+			[
+				"border-",
+				"border-collapse"
+			],
+			[
+				"Poi",
+				"PositionSelectedAccountView"
+			],
+			[
+				"Pos",
+				"PositionSelectedAccountView"
+			],
+			[
+				"sele",
+				"selectedAccount"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"acc",
+				"accountSelector"
+			],
+			[
+				"uc",
+				"ucwords"
+			],
+			[
+				"carousel",
+				"carouselNav"
+			],
+			[
+				"property",
+				"propertyCondition"
+			],
+			[
+				"proper",
+				"propertyCondition"
+			],
+			[
+				"entity",
+				"entity_type"
+			],
+			[
+				"possib",
+				"possibleRegions"
+			],
+			[
+				"cou",
+				"country_code"
+			],
+			[
+				"per",
+				"persistantCookies"
+			],
+			[
+				"total",
+				"totalCookies"
+			],
+			[
+				"retun",
+				"returnJSON"
+			],
+			[
+				"exp",
+				"expiry"
+			],
+			[
+				"e",
+				"expiration"
+			],
+			[
+				"thi",
+				"thirdPartyCookies"
+			],
+			[
+				"ui-icon-plus",
+				"ui-icon-plusthick"
+			],
+			[
+				"mt",
+				"myAltRowClass"
+			],
+			[
+				"Title",
+				"TitleFormatter"
+			],
+			[
+				"data",
+				"dataView"
+			],
+			[
+				"entere",
+				"entered_password"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"list-",
+				"list-style"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"re",
+				"resetContent"
+			],
+			[
+				"mouse",
+				"mouseEffect"
+			],
+			[
+				"li",
+				"list-style"
+			],
+			[
+				"bor",
+				"border-collapse"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"lis",
+				"list-style"
+			],
+			[
+				"i",
+				"inside"
+			],
+			[
+				"list",
+				"list-style-image"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"bin",
+				"bindAll"
+			],
+			[
+				"jsno",
+				"json_encode"
+			],
+			[
+				"auth",
+				"authModel"
+			],
+			[
+				"en",
+				"encrypted_login"
+			],
+			[
+				"mysql_fetch_a",
+				"mysql_fetch_assoc"
+			],
+			[
+				"real_esa",
+				"mysql_real_escape_string"
+			],
+			[
+				"login",
+				"loginForm"
+			],
+			[
+				"getElement",
+				"getElementsByClassName  (function)"
+			],
+			[
+				"P",
+				"Popen  (class)"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 127.0,
+		"selected_items":
+		[
+			[
+				"error",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"erro",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"err",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"save",
+				"File: Save All"
+			]
+		],
+		"width": 476.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Library/WebServer/Documents/bus/js/vendor/require.js",
+		"/Library/WebServer/Documents/bus/js/busdata.js",
+		"/Library/WebServer/Documents/bus/js/templates/nav.html",
+		"/Library/WebServer/Documents/bus/js/utils/stops.js",
+		"/Library/WebServer/Documents/bus/js/models/times.js",
+		"/Library/WebServer/Documents/bus/js/views/mainnav.js",
+		"/Library/WebServer/Documents/bus/js/views/inbound.js",
+		"/Library/WebServer/Documents/bus/js/views/outbound.js",
+		"/Library/WebServer/Documents/bus/css/theme.css",
+		"/Library/WebServer/Documents/bus/index.html",
+		"/Library/WebServer/Documents/bus/js/routes.js",
+		"/Library/WebServer/Documents/bus/js/models/direction.js",
+		"/Library/WebServer/Documents/bus/js/model/times.js",
+		"/Library/WebServer/Documents/bus/js/views/times.js",
+		"/Library/WebServer/Documents/bus/js/views/times",
+		"/Library/WebServer/Documents/bus/js/main.js",
+		"/Library/WebServer/Documents/bus/js/util/messagebus.js",
+		"/Library/WebServer/Documents/bus/js/viewTimes.js",
+		"/Library/WebServer/Documents/bus/js/modelTimes.js",
+		"/Library/WebServer/Documents/bus/js/collectionTimes.js",
+		"/Library/WebServer/Documents/bus/js/approuter.js",
+		"/Library/WebServer/Documents/bus/js/app.js",
+		"/Users/kdimat/Templates/BackboneHTML5/index.html",
+		"/Library/WebServer/Documents/bus/js/maps.js",
+		"/Library/WebServer/Documents/bus/js/_original.js",
+		"/Users/kdimat/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/kdimat/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Library/WebServer/Documents/bus/js/.gitignore",
+		"/Library/WebServer/Documents/bus/bus.sublime-workspace",
+		"/Users/kdimat/source/bus/js/app.js",
+		"/Users/kdimat/source/bus/css/theme.css",
+		"/Users/kdimat/source/bus/index.html",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/all/themes/mothership/functions/menu.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/all/themes/mothership/template.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/awesome.localhost/themes/wmp/template.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/all/modules/wmp_funds_grid/wmp_funds_grid.info",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/all/modules/wmp_carousel/wmp_carousel.module",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/all/modules/wmp_funds_grid/row.tpl.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/all/modules/wmp_funds_grid/wmp_funds_grid.views.inc",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/all/modules/wmp_funds_grid/wmp_funds_grid.module",
+		"/Library/WebServer/Documents/_basement/PoweredByMacOSXLarge.gif",
+		"/Users/kdimat/Desktop/tech_screen/services/sample.json",
+		"/Library/WebServer/Documents/sample.json",
+		"/Library/WebServer/Documents/assets/main.css",
+		"/Library/WebServer/Documents/assets/index.html",
+		"/Library/WebServer/Documents/assets/account.js",
+		"/Library/WebServer/Documents/assets/sample.json",
+		"/Users/kdimat/Desktop/assets/sample.json",
+		"/Users/kdimat/Desktop/assets/main.css",
+		"/Users/kdimat/Desktop/assets/index.html",
+		"/Users/kdimat/Desktop/assets/account.js",
+		"/Users/kdimat/Downloads/bootstrap 5/css/bootstrap.css",
+		"/Library/WebServer/Documents/eurobake/jquery-ui.css",
+		"/Library/WebServer/Documents/bullsfirst-jquery-backbone/js/bullsfirst/domain/UserContext.js",
+		"/Library/WebServer/Documents/bullsfirst-jquery-backbone/css/bullsfirst.css",
+		"/Library/WebServer/Documents/bullsfirst-jquery-backbone/js/bullsfirst/views/TemplateManager.js",
+		"/Library/WebServer/Documents/bullsfirst-jquery-backbone/js/bullsfirst/views/AccountSelectorView.js",
+		"/Library/WebServer/Documents/bullsfirst-jquery-backbone/index.html",
+		"/Library/WebServer/Documents/bullsfirst-jquery-backbone/js/bullsfirst/views/PositionSelectedAccountView.js",
+		"/Library/WebServer/Documents/bullsfirst-jquery-backbone/js/bullsfirst/views/PositionsTabView.js",
+		"/Library/WebServer/Documents/bullsfirst-jquery-backbone/js/bullsfirst/views/PositionView.js",
+		"/Library/WebServer/Documents/bullsfirst-jquery-backbone/js/bullsfirst/views/PositionTableView.js",
+		"/Library/WebServer/Documents/bullsfirst-jquery-backbone/js/bullsfirst/templates/position.txt",
+		"/Library/WebServer/Documents/bullsfirst-jquery-backbone/js/bullsfirst/views/OrdersTabView.js",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/all/modules/wmp_knowledgebank_list/wmp_knowledgebank_list.module",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/all/modules/wmp_content_filter/wmp_content_filter.module",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/all/modules/wmp_content_filter/wmp_content_filter.info",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/all/modules/wmp_language_switcher/wmp_language_switcher.info",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/all/modules/wmp_language_switcher/wmp_language_switcher.module",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/default/themes/wmp/templates/node--user-agreement.tpl.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/default/themes/wmp/templates/page--welcome.tpl.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/awesome.localhost/themes/wmp/templates/html.tpl.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/awesome.localhost/themes/wmp/wmp.info",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/default/themes/wmp/css/theme.css",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/awesome.localhost/themes/wmp/css/theme.css",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/awesome.localhost/themes/wmp/js/script.js",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/default/themes/wmp/templates/page.tpl.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/awesome.localhost/themes/wmp/js/vendor/jquery.simplemodal-1.4.3.js",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/default/themes/wmp/templates/_page--carousel.tpl.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/default/themes/wmp/template.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/awesome.localhost/themes/wmp/templates/page--front.tpl.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/awesome.localhost/themes/wmp/templates/page--welcome.tpl.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/default/themes/wmp/templates/field.tpl.php",
+		"/Users/kdimat/source/panopticom/app.py",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/default/themes/wmp/templates/field--carousel.tpl.php",
+		"/Library/WebServer/Documents/eurobake/theme.css",
+		"/Library/WebServer/Documents/eurobake/index.html",
+		"/Library/WebServer/Documents/eurobake/map.js",
+		"/Users/kdimat/source/eurobake/bake_data.js",
+		"/Library/WebServer/Documents/eurobake/bake_data.js",
+		"/Users/kdimat/source/eurobake/app.js",
+		"/Users/kdimat/source/eurobake/README.md",
+		"/Users/kdimat/source/eurobake/scape_alexa.py",
+		"/Users/kdimat/source/eurobake/page.html",
+		"/Users/kdimat/source/taggy/env_vars",
+		"/Users/kdimat/source/eu-bake/app.py",
+		"/Users/kdimat/source/eu-bake/_app.js",
+		"/Users/kdimat/www/wmp2/jquery-ui.css",
+		"/Users/kdimat/www/wmp2/ui.jqgrid.css",
+		"/Users/kdimat/www/wmp2/js/jquery.jqGrid.src.js",
+		"/Users/kdimat/www/wmp2/grid_stub3.html",
+		"/Library/WebServer/Documents/wmp2/grid_stub2.html",
+		"/Users/kdimat/www/wmp2/grid_stub.html",
+		"/Users/kdimat/www/wmp2/home.html",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/awesome.localhost/themes/wmp/templates/page.tpl.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/awesome.localhost/settings.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/default/settings.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/example.sites.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/default/themes/wmp/templates/views-view-fields--carousel.tpl.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/awesome.localhost/themes/wmp/templates/views-view--carousel.tpl.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/awesome.localhost/themes/wmp/templates/views-view-fields--carousel--block.tpl.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/all/modules/wmp_carousel/body.tpl.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/all/modules/wmp_carousel/nav.tpl.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/all/modules/site_map/site_map.module",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/all/modules/site_map/site_map.theme.inc",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/default/themes/wmp/templates/html.tpl.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/awesome.localhost/themes/wmp/templates/views-view-fields--carousel--body.tpl.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/awesome.localhost/themes/wmp/templates/block--mainnav.tpl.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/awesome.localhost/themes/wmp/templates/block--views--carousel-block.tpl.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/awesome.localhost/themes/wmp/templates/_views_exposed_filter.tpl.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/default/themes/wmp/templates/views_exposed_filter.tpl.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/awesome.localhost/themes/wmp/css/_theme.css",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/awesome.localhost/themes/wmp/templates/block--menu--menu-universal-footer.tpl.php",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/awesome.localhost/themes/wmp/templates/block--footer.tpl.php",
+		"/Library/WebServer/Documents/wmp2/ie_testing.html",
+		"/Users/kdimat/source/wellington/wmp/acquia/wmp/docroot/sites/awesome.localhost/themes/wmp/templates/views-exposed-form.tpl.php",
+		"/Users/kdimat/www/bullsfirst-jquery-backbone/js/bullsfirst/views/PositionsTabView.js",
+		"/Users/kdimat/www/bullsfirst-jquery-backbone/js/bullsfirst/domain/Position.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"(){",
+			");\n",
+			"run_id",
+			"route",
+			"tab",
+			"query",
+			"menu",
+			"dpr",
+			"nav",
+			"nav-tabs",
+			"border",
+			"collapse",
+			"td",
+			"th",
+			"theader",
+			"th",
+			";\n",
+			".ui-jqgrid",
+			".ui-jqgrid tr.ui-row-ltr td ",
+			"number",
+			"right",
+			"positions-tab",
+			"positions-",
+			"opacity",
+			"css",
+			"alpha",
+			"transparent",
+			"overf",
+			"region",
+			"  	\n",
+			"field_region_tid",
+			"die",
+			"wmp_preprocess_field",
+			"null",
+			"triangle",
+			"1-e",
+			"radio-off",
+			"treeclick",
+			"ui-icon-triangle-1-e",
+			"tree-minus",
+			"ui-widget-content",
+			"ral",
+			"align:center",
+			"border-right",
+			"grid",
+			"234e70",
+			"grid",
+			"border",
+			"radius",
+			"-moz-border-radius-topleft: 5px;\n    -webkit-border-top-left-radius: 5px;\n    -khtml-border-top-left-radius: 5px;\n    border-top-left-radius: 5px;",
+			"radius",
+			"requiredField",
+			"myFilter",
+			"testFilter",
+			"myFilter",
+			"footer",
+			"hover",
+			"raquo",
+			"#value",
+			"i18n",
+			";//",
+			"echo",
+			"print",
+			"print_",
+			"render",
+			"element",
+			"render_element",
+			"theme",
+			"session",
+			"footer",
+			"main",
+			"mainNav",
+			"mainMenu",
+			")';",
+			"grid",
+			"footer",
+			"carousel",
+			"border-bottom:",
+			"language",
+			"home.html",
+			"simple_html_dom",
+			"fonr",
+			"list-style-image",
+			"h1 {",
+			"semibold",
+			"font-family: millerdisplay",
+			"font-family: bentonsansregular",
+			"font-family: bentonsansmedium",
+			"millerdisplay",
+			"h1",
+			"fd",
+			"fdNav",
+			"FOOTER",
+			"footer",
+			"@",
+			"span",
+			"')?> ",
+			"wcm_",
+			"p",
+			"p small",
+			"h1",
+			".util",
+			"br",
+			".util",
+			"p {",
+			".small",
+			".util",
+			"util",
+			";\n",
+			".content",
+			"header",
+			"repeat",
+			"\\",
+			"[",
+			"utilNav",
+			"h2",
+			"utilNav",
+			".content",
+			"p {",
+			"satin",
+			"ul {",
+			"ul",
+			"header",
+			"select",
+			"grid",
+			".content",
+			" \n",
+			"uit"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"market",
+			"welcome",
+			"font-family: 'millerdisplay'",
+			"font-family: 'bentonsansregular'",
+			"font-family: 'bentonsansmedium'",
+			"wmp_",
+			"<footer>\n		<div class=\"content\">&copy;2012 Wellington Management</div>\n	</footer>\n",
+			"phantomjs pechorin.js"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"var foo: function(){"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 245.0,
+	"status_bar_visible": true
+}
