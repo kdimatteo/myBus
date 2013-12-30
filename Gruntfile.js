@@ -56,6 +56,21 @@ module.exports = function(grunt) {
 		},
 
 
+		'sftp-deploy': {
+			build: {
+				auth: {
+					host: 'hauthaus.net',
+					port: 22,
+					authKey: 'key1'
+				},
+				src: './dist',
+				dest: '/home/haut/hauthaus.net/bus',
+				exclusions: ['/path/to/source/folder/**/.DS_Store', '/path/to/source/folder/**/Thumbs.db', 'dist/tmp'],
+				server_sep: '/'
+			}
+		}
+
+
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-clean');
@@ -63,8 +78,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-remove-logging");
 	grunt.loadNpmTasks('grunt-useref');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
+	grunt.loadNpmTasks('grunt-sftp-deploy');
 
-	grunt.registerTask('default', ['clean', 'copy', 'requirejs', 'removelogging', 'useref']);
+	grunt.registerTask('default', ['clean', 'copy', 'requirejs', 'removelogging', 'useref', 'sftp-deploy']);
 
 
 
