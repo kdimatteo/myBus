@@ -5,9 +5,19 @@
  * @author Keith DiMatteo
  */
 
-define(["utils/messagebus", "text!templates/nav.html"], function(MessageBus, tplNav){
+define([
+	"backbone",
+	"utils/messagebus",
+	"mustache",
+	"text!templates/nav.html"
+], function(
+	Backbone,
+	MessageBus,
+	Mustache,
+	tplNav
+){
+	"use strict";
 	return Backbone.View.extend({
-		
 		events: {
 			"click #btnInbound"		: "onNavClick",
 			"click #btnOutbound"	: "onNavClick"
@@ -19,7 +29,7 @@ define(["utils/messagebus", "text!templates/nav.html"], function(MessageBus, tpl
 
 		onNavClick: function(e){
 			var direction;
-			if(e.currentTarget.id == "btnInbound"){
+			if(e.currentTarget.id === "btnInbound"){
 				direction = "inbound";
 			} else {
 				direction = "outbound";

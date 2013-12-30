@@ -6,9 +6,11 @@
 define([
 	"models/stops",
 	"utils/messagebus",
+	"modernizr",
 ], function(
 	Stops,
-	MessageBus
+	MessageBus,
+	Modernizr
 ){
 	"use strict";
 	var LocationLib = {
@@ -23,12 +25,6 @@ define([
 		displayName : "",
 
 		initialize : function(){
-			Modernizr.load({
-				test: Modernizr.geolocation,
-				//yep : 'geo.js',
-				nope: 'vendor/geo.js'
-			});
-			
 			this.collection.bind("reset", this.onStopsLoaded, this);
 			this.stops = this.collection.fetch();
 			var that = this;

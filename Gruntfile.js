@@ -1,4 +1,5 @@
 module.exports = function(grunt) {
+	"use strict";
 
 	// Project configuration.
 	grunt.initConfig({
@@ -14,12 +15,28 @@ module.exports = function(grunt) {
 				src: 'index.html',
 				dest: 'dist/index.html',
 			},
-			fonts: {
-				src: 'fonts/*',
+			css: {
+				src: 'css/*',
 				dest: 'dist/',
-			},
+			}
 		},
 
+		requirejs: {
+			compile: {
+				options: {
+					//almond: true,
+					name : 'main',
+					optimize: 'none',
+					baseUrl: "js",
+					mainConfigFile: "js/config.js",
+					out: "dist/js/app.min.js",
+					preserveLicenseComments: false,
+					wrap:true,
+					include: 'vendor/require.js'
+
+				}
+			}
+		},
 
 		useref: {
 			// specify which files contain the build blocks
@@ -27,30 +44,14 @@ module.exports = function(grunt) {
 			//html: '../dist/**/*.html',
 			// explicitly specify the temp directory you are working in
 			// this is the the base of your links ( "/" )
-			temp: '/'
+			temp: 'dist'
 		},
 
-		uglify: {
-			options: {
-				banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-			},
-			build: {
-				files : {
-					'dist/js/app.min.js' : [
-						'js/vendor/jquery-2.0.3.js',
-						'js/vendor/lodash.js',
-						'js/app.js'
-					]
-				}
-				//src: '../js/<%= pkg.name %>.js',
-				//dest: 'dist/app.min.js'
-			}
-		},
-
+	
 		removelogging: {
 			dist: {
-				src: "js/app.js",
-				dest: "js/app.js",
+				src: "dist/js/app.min.js",
+				dest: "dist/js/app.min.js",
 			}
 		},
 
@@ -61,10 +62,11 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks("grunt-remove-logging");
 	grunt.loadNpmTasks('grunt-useref');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-requirejs');
+
+	grunt.registerTask('default', ['clean', 'copy', 'requirejs', 'removelogging', 'useref']);
 
 
-	grunt.registerTask('default', ['clean', 'copy', 'useref', 'removelogging', 'uglify']);
 
 };
 

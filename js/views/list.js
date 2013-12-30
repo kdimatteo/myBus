@@ -6,7 +6,7 @@
  * @todo merge with outbound view, ended up being the same anyway
  */
 
-define([], function(){
+define(["backbone"], function(Backbone){
 	"use strict";
 		
 	return Backbone.View.extend({

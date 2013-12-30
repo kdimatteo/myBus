@@ -1,10 +1,12 @@
-define(["approuter"], function(AppRouter){
-	
-	"use strict";
+(function(require) {
+    'use strict';
+    require([
+        'approuter'
+    ],
 
-	$(document).ready(function(){
-		var appRouter = new AppRouter();
+    function(AppRouter) {
+        var appRouter = new AppRouter();
 		Backbone.history.start();
-	});
+    });
 
-});
+}(require));

@@ -1,4 +1,4 @@
-define(function() {
+define(["underscore", "backbone"], function(_, Backbone){
     'use strict';
 
     var _messageBus = _.extend({}, Backbone.Events);
