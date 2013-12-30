@@ -15,7 +15,9 @@ var require = {
 
         mustache:      'vendor/mustache',
 
-        string:         'utils/string'
+        string:         'utils/string',
+
+        geoMobile:      'vendor/geo-mobile'
 
 
     },
@@ -39,7 +41,11 @@ var require = {
 
         string: {
             exports: "string",
-        }
+        },
+
+        geoMobile: {
+            exports: "GeoMobile"
+        },
 
     }
 };

@@ -7,10 +7,12 @@ define([
 	"models/stops",
 	"utils/messagebus",
 	"modernizr",
+	"geoMobile"
 ], function(
 	Stops,
 	MessageBus,
-	Modernizr
+	Modernizr,
+	GeoMobile
 ){
 	"use strict";
 	var LocationLib = {
@@ -23,14 +25,27 @@ define([
 		collection 	: new Stops(),
 		distances 	: [],
 		displayName : "",
+		geoMobile   : GeoMobile,
 
 		initialize : function(){
 			this.collection.bind("reset", this.onStopsLoaded, this);
 			this.stops = this.collection.fetch();
 			var that = this;
-			//navigator.geolocation.getCurrentPosition(this.onPositionLoaded);
-			navigator.geolocation.getCurrentPosition(that.onPositionLoaded);
+			var options = { timeout: 31000, enableHighAccuracy: true, maximumAge: 90000 };
+			
+			if(window.geo_position_js.init()){
+				window.geo_position_js.getCurrentPosition(that.onPositionLoaded, that.onError);
+			} else {
+ 				//navigator.geolocation.getCurrentPosition(this.onPositionLoaded);
+				navigator.geolocation.getCurrentPosition(that.onPositionLoaded, this.onError, options);
+			}
+		},
 
+		onError : function(s){
+			_.each(s, function(i, k){
+				$("#timesContainer").append("<li>" + i + ", " + k + "</li>");
+			});
+			//document.write(s);
 		},
 		
 		checkRender : function(){
