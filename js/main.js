@@ -1,4 +1,4 @@
-define(["routes"], function(AppRouter){
+define(["approuter"], function(AppRouter){
 	
 	"use strict";
 

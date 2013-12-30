@@ -1,0 +1,23 @@
+{
+  "name": "myBus",
+  "version": "0.0.0",
+  "description": "Bus Locator for Bo & Keith",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kdimatteo/myBus.git"
+  },
+  "author": "Keith DiMatteo",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "grunt-useref": "0.0.16",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-remove-logging": "~0.2.0",
+    "grunt-contrib-uglify": "~0.2.7"
+  }
+}

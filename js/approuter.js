@@ -1,8 +1,20 @@
 /**
  * @todo simplify on inbound + outbound views, ended up being the same anyway
  */
-define(["views/mainnav", "views/inbound", "views/outbound", "models/times", "utils/messagebus"],
-    function(MainNavView, InboundView, OutboundView, TimesCollection, MessageBus){
+define([
+    "views/mainnav",
+    "views/list",
+    "models/times",
+    "models/location",
+    "utils/messagebus"
+],
+    function(
+        MainNavView,
+        ListView,
+        TimesCollection,
+        LibLocation,
+        MessageBus
+    ){
 
     "use strict";
     
@@ -13,9 +25,14 @@ define(["views/mainnav", "views/inbound", "views/outbound", "models/times", "uti
         refresh: 0,
 
         routes: {
-            ""          : "main",
+            //"#!" : "foo"
             "inbound"   : "showInbound",
             "outbound"  : "showOutbound"
+        },
+
+        foo: function(){
+            //
+            console.log("foo");
         },
 
         initialize: function(){
@@ -27,16 +44,17 @@ define(["views/mainnav", "views/inbound", "views/outbound", "models/times", "uti
                 
             }, this);
 
+            MessageBus.on("LocationLoaded", function(){
+                if(LibLocation.closestStop.displayName === "Bunker Hill St @ Sullivan St"){
+                    this.navigate("inbound", {trigger:true});
+                } else {
+                    this.navigate("outbound", {trigger:true});
+                }
+            }, this);
+
+            LibLocation.initialize();
         },
 
-        main: function(){
-            var now = new Date();
-            if(now.getHours() >= 15){
-                this.navigate("outbound", {trigger:true});
-            } else {
-                this.navigate("inbound", {trigger:true});
-            }
-        },
 
         addNav: function(mode){
             if(this.mainNav === null){
@@ -59,19 +77,29 @@ define(["views/mainnav", "views/inbound", "views/outbound", "models/times", "uti
          *
          */
         showOutbound: function(){
-            var timesCollection = new TimesCollection();
-            timesCollection.stopID = "16540"; // 92 @ franklin st @ washinton st
-            
-            var timesView = new OutboundView({el:"#timesContainer", collection:timesCollection});
-            timesCollection.fetch();
+            if(LibLocation.closestStop.stopID !== undefined){
+                var timesCollection = new TimesCollection();
+                //timesCollection.stopID = "16540"; // 92 @ franklin st @ washinton st
+                timesCollection.stopID = LibLocation.closestStop.stopID;
 
-            this.switchView(timesView);
+                var timesView = new ListView({
+                    el : "#timesContainer", 
+                    collection : timesCollection, 
+                    closestStop : LibLocation.closestStop.displayName
+                });
 
-            this.refresh = setInterval(function(){
                 timesCollection.fetch();
-            }, 30000);
 
-            this.addNav("outbound");
+                this.switchView(timesView);
+
+                this.refresh = setInterval(function(){
+                    timesCollection.fetch();
+                }, 30000);
+
+                this.addNav("outbound");
+            } else {
+                this.navigate("", {trigger:true});
+            }
             
         },
 
@@ -79,7 +107,11 @@ define(["views/mainnav", "views/inbound", "views/outbound", "models/times", "uti
             var timesCollection = new TimesCollection();
             timesCollection.stopID = "02848";
 
-            var timesView = new InboundView({el:"#timesContainer", collection:timesCollection});
+            var timesView = new ListView({
+                el:"#timesContainer",
+                collection:timesCollection,
+                closestStop : "Home"
+            });
             timesCollection.fetch();
 
             this.switchView(timesView);
