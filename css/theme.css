@@ -9,6 +9,17 @@ html, body {
 	background: #F5F5F5;
 } 
 
+#status select {
+   background: transparent;
+   width: 268px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   -webkit-appearance: none;
+}
+
 #map_canvas {
 	float:left; 
 	margin:0 10px 0 0;

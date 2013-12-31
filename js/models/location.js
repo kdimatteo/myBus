@@ -89,12 +89,15 @@ define([
 		},
 
 		render : function(){
+			var html = "";
+
 			_.each(this.collection.toJSON()[0]["items"], function(item){
 				var o = {};
 				o.displayName = item.display_name.trim();
 				o.d = this.calcDistance(item.longitude, item.latitude);
 				o.stopID = item.id
 				this.distances.push(o);
+				html += '<li>'+o.displayName+'</li>'
 			}, this);
 
 			var o = _.sortBy(this.distances, 'd');
@@ -103,6 +106,7 @@ define([
 
 			MessageBus.trigger('LocationLoaded');
 
+			$("#userStop").append(html);
 			//console.log(this.distances.orderBy());
 			//console.log(this.collection.toJSON()[0]["items"], this.latLon);
 		}

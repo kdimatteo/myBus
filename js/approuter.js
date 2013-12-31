@@ -4,13 +4,16 @@
 define([
     "views/mainnav",
     "views/list",
+    "views/locations",
     "models/times",
     "models/location",
+    "models/locations",
     "utils/messagebus"
 ],
     function(
         MainNavView,
         ListView,
+        LocationView,
         TimesCollection,
         LibLocation,
         MessageBus
@@ -20,6 +23,7 @@ define([
     
     return Backbone.Router.extend({
         
+        locationPicker: {},
         currentView : "",
         mainNav : null,
         refresh: 0,
@@ -47,6 +51,7 @@ define([
                 }
             }, this);
 
+            this.locationPicker = new LocationView({el:$("#userStop"), collection:LocationCollection});
             LibLocation.initialize();
         },
 
