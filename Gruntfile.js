@@ -6,7 +6,8 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		
 		clean: {
-            clean: [ './dist' ]
+            clean: [ './dist' ],
+            postBuild: [ './dist/js/app.js' ]
         },
        
 
@@ -21,15 +22,20 @@ module.exports = function(grunt) {
 			}
 		},
 
+		/**
+		 * for some reason requireJS optimization is truncating app.min.js during build. 
+		 * we have a distinct task for this below.
+		 */
 		requirejs: {
 			compile: {
 				options: {
 					//almond: true,
 					name : 'main',
-					optimize: 'none',
+					//optimize: 'uglify2',
+					optimize: 'none', 
 					baseUrl: "js",
 					mainConfigFile: "js/config.js",
-					out: "dist/js/app.min.js",
+					out: "dist/js/app.js",
 					preserveLicenseComments: false,
 					wrap:true,
 					include: 'vendor/require.js'
@@ -46,16 +52,36 @@ module.exports = function(grunt) {
 			// this is the the base of your links ( "/" )
 			temp: 'dist'
 		},
-
-	
+		
+		
 		removelogging: {
 			dist: {
-				src: "dist/js/app.min.js",
-				dest: "dist/js/app.min.js",
+				src: "dist/js/app.js",
+				dest: "dist/js/app.js",
 			}
 		},
 
+		uglify: {
+			options: {
+				mangle: false
+			},
+			prod: {
+				files: {
+					'dist/js/app.min.js': ['dist/js/app.js']
+				}
+			}
+		},
 
+		/**
+		 * requires a .ftppass file which is omitted from this repo. 
+		 * this file contains a JS object such as :
+		 * {
+  		 * 	"key1": {
+     	 *		"username": "haut",
+    	 * 		"password": "hau667gough"
+  		 *	}
+  		 *}
+		 */
 		'sftp-deploy': {
 			build: {
 				auth: {
@@ -77,11 +103,13 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks("grunt-remove-logging");
 	grunt.loadNpmTasks('grunt-useref');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
 	grunt.loadNpmTasks('grunt-sftp-deploy');
 
-	grunt.registerTask('default', ['clean', 'copy', 'requirejs', 'removelogging', 'useref']);
-	grunt.registerTask('deploy', ['clean', 'copy', 'requirejs', 'removelogging', 'useref', 'sftp-deploy']);
+
+	grunt.registerTask('default', ['copy', 'requirejs', 'removelogging', 'useref', 'uglify']);
+	grunt.registerTask('deploy', ['clean', 'copy', 'requirejs', 'removelogging', 'useref', 'uglify', 'clean:postBuild', 'sftp-deploy']);
 
 
 

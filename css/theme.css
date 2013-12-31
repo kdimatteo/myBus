@@ -20,6 +20,22 @@ html, body {
 	width:85%; 
 }
 
+#status {
+	text-align:center;
+}
+
+#status select {
+	 background: transparent;
+   width: 268px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   -webkit-appearance: none;
+}
+
 ul.mainNav {
 	margin:0;
 	width:100%;
@@ -56,3 +72,4 @@ ul.times li{
 .small {
 	color:#ccc;
 }
+

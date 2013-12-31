@@ -89,18 +89,25 @@ define([
 		},
 
 		render : function(){
+			var html = "";
 			_.each(this.collection.toJSON()[0]["items"], function(item){
 				var o = {};
 				o.displayName = item.display_name.trim();
 				o.d = this.calcDistance(item.longitude, item.latitude);
 				o.stopID = item.id
 				this.distances.push(o);
+
+				html += '<option value="'+o.stopID+'">' + o.displayName + '</option>';
+
 			}, this);
 
 			var o = _.sortBy(this.distances, 'd');
 			console.log(o[0]);
 			this.closestStop = o[0];
 
+			//$("#userStop").html(html);
+			//$("#userStop").val(o[0]["stopID"]);
+			
 			MessageBus.trigger('LocationLoaded');
 
 			//console.log(this.distances.orderBy());
