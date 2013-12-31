@@ -80,7 +80,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
 	grunt.loadNpmTasks('grunt-sftp-deploy');
 
-	grunt.registerTask('default', ['clean', 'copy', 'requirejs', 'removelogging', 'useref', 'sftp-deploy']);
+	grunt.registerTask('default', ['clean', 'copy', 'requirejs', 'removelogging', 'useref']);
+	grunt.registerTask('deploy', ['clean', 'copy', 'requirejs', 'removelogging', 'useref', 'sftp-deploy']);
 
 
 

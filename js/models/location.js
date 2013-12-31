@@ -33,8 +33,8 @@ define([
 			var that = this;
 			var options = { timeout: 31000, enableHighAccuracy: true, maximumAge: 90000 };
 			
-			if(window.geo_position_js.init()){
-				window.geo_position_js.getCurrentPosition(that.onPositionLoaded, that.onError);
+			if(geo_position_js.init()){
+				geo_position_js.getCurrentPosition(that.onPositionLoaded, that.onError, options);
 			} else {
  				//navigator.geolocation.getCurrentPosition(this.onPositionLoaded);
 				navigator.geolocation.getCurrentPosition(that.onPositionLoaded, this.onError, options);
@@ -100,7 +100,6 @@ define([
 			var o = _.sortBy(this.distances, 'd');
 			console.log(o[0]);
 			this.closestStop = o[0];
-
 
 			MessageBus.trigger('LocationLoaded');
 

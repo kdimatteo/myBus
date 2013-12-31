@@ -27,7 +27,7 @@ define(["backbone"], function(Backbone){
 			var html = "";
 			var o = this.collection.toJSON();
 			_.each(o[0].items, function(o, i, list){
-				html += "<li>" + o.route_id + " Bus arriving in " + o.minutes + " minutes <span class=\"small\">" + this.options.closestStop + "</span></li>";
+				html += "<li>" + o.route_id + " Bus arriving in " + o.minutes + " minutes <span class=\"small\"> @ " + this.options.closestStop + "</span></li>";
 			}, this);
 			return html;
 		},

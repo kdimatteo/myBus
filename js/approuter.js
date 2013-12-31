@@ -30,11 +30,6 @@ define([
             "outbound"  : "showOutbound"
         },
 
-        foo: function(){
-            //
-            console.log("foo");
-        },
-
         initialize: function(){
 
             MessageBus.on("ChangePage", function(args){
