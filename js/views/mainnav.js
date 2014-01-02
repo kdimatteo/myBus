@@ -5,7 +5,7 @@
  * @author Keith DiMatteo
  */
 
-define(["utils/messagebus", "text!templates/nav.html"], function(MessageBus, tplNav){
+define(["utils/messagebus", "text!templates/nav.html", "backbone", "mustache"], function(MessageBus, tplNav, Backbone, Mustache){
 	return Backbone.View.extend({
 		
 		events: {

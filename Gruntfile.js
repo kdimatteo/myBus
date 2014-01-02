@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 					optimize: 'none',
 					baseUrl: "js",
 					mainConfigFile: "js/config.js",
-					out: "dist/js/app.min.js",
+					out: "dist/js/app.js",
 					preserveLicenseComments: false,
 					wrap:true,
 					include: 'vendor/require.js'
@@ -50,10 +50,21 @@ module.exports = function(grunt) {
 	
 		removelogging: {
 			dist: {
-				src: "dist/js/app.min.js",
-				dest: "dist/js/app.min.js",
+				src: "dist/js/app.js",
+				dest: "dist/js/app.js",
 			}
 		},
+
+		 uglify: {
+            options: {
+                mangle: false
+            },
+            prod: {
+                files: {
+                    'dist/js/app.min.js': ['dist/js/app.js']
+                }
+            }
+        },
 
 
 		'sftp-deploy': {
@@ -76,12 +87,13 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks("grunt-remove-logging");
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-useref');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
 	grunt.loadNpmTasks('grunt-sftp-deploy');
 
-	grunt.registerTask('default', ['clean', 'copy', 'requirejs', 'removelogging', 'useref']);
-	grunt.registerTask('deploy', ['clean', 'copy', 'requirejs', 'removelogging', 'useref', 'sftp-deploy']);
+	grunt.registerTask('default', ['clean', 'copy', 'requirejs', 'removelogging',  'uglify', 'useref']);
+	grunt.registerTask('deploy', ['clean', 'copy', 'requirejs', 'removelogging', 'uglify', 'useref', 'sftp-deploy']);
 
 
 

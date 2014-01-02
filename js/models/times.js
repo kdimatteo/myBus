@@ -2,7 +2,7 @@
  * http://proximobus.appspot.com/agencies/mbta/stops/" + this.stopID + "/predictions.js?callback=?"
  * http://proximobus.appspot.com/agencies/mbta/routes/93/stops
  */
- define(function(){
+define(["backbone"], function(Backbone){
 	
 	"use strict";
 
