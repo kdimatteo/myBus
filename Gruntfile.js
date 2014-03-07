@@ -79,7 +79,7 @@ module.exports = function(grunt) {
 				exclusions: ['/path/to/source/folder/**/.DS_Store', '/path/to/source/folder/**/Thumbs.db', 'dist/tmp'],
 				server_sep: '/'
 			}
-		}
+		},
 
 
 	});
@@ -91,7 +91,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-useref');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
 	grunt.loadNpmTasks('grunt-sftp-deploy');
-
+	
 	grunt.registerTask('default', ['clean', 'copy', 'requirejs', 'removelogging',  'uglify', 'useref']);
 	grunt.registerTask('deploy', ['clean', 'copy', 'requirejs', 'removelogging', 'uglify', 'useref', 'sftp-deploy']);
 
