@@ -15,9 +15,9 @@ module.exports = function(grunt) {
 				src: 'index.html',
 				dest: 'dist/index.html',
 			},
-			css: {
-				src: 'css/*',
-				dest: 'dist/',
+			config: {
+				src: '.htaccess',
+				dest: 'dist/.htaccess',
 			}
 		},
 
