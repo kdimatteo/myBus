@@ -102,7 +102,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-sftp-deploy');
 	
 	grunt.registerTask('default', ['clean', 'copy', 'compass', 'requirejs', 'removelogging',  'uglify', 'useref']);
-	grunt.registerTask('deploy', ['clean', 'copy', 'requirejs', 'removelogging', 'uglify', 'useref', 'sftp-deploy']);
+	grunt.registerTask('deploy', ['clean', 'copy', 'compass', 'requirejs', 'removelogging', 'uglify', 'useref', 'sftp-deploy']);
 
 
 

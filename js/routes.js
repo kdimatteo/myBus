@@ -75,7 +75,7 @@ define(["views/mainnav", "views/list", "models/times", "utils/messagebus"],
             timesCollection.fetch();
             this.switchView(timesView);
             this.addNav("outbound");
-            this.addRefresh();
+            this.addRefresh(timesCollection);
         },
 
         showInbound: function(){
@@ -85,7 +85,7 @@ define(["views/mainnav", "views/list", "models/times", "utils/messagebus"],
 
             this.switchView(timesView);
             this.addNav("inbound");
-            this.addRefresh();
+            this.addRefresh(timesCollection);
         }
 
 	});
