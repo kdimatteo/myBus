@@ -7,17 +7,6 @@
 html, body {
 	background: #F5F5F5; 
 	font-family: 'Exo 2', sans-serif;
-} 
-
-#map_canvas {
-	float:left; 
-	margin:0 10px 0 0;
-}
-
-#container {
-	margin-left:auto; 
-	margin-right:auto;
-	width:85%; 
 }
 
 ul.mainNav {
@@ -54,4 +43,12 @@ ul.times li{
 	border-top:1px solid #fff;
 	border-bottom:1px solid #ccc;
 	color:#373737;
+}
+
+.loading {
+	background: inline-image("loading.gif");
+	background-position: center;
+	background-repeat: no-repeat;
+	height:100px;
+
 }

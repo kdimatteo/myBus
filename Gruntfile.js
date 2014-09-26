@@ -38,6 +38,14 @@ module.exports = function(grunt) {
 			}
 		},
 
+		compass: {                    
+	    dist: {    
+	      options: {
+        	config: 'config.rb'
+      	}
+	    }
+	  },
+
 		useref: {
 			// specify which files contain the build blocks
 			html: 'dist/index.html',
@@ -76,7 +84,7 @@ module.exports = function(grunt) {
 				},
 				src: './dist',
 				dest: '/home/haut/hauthaus.net/bus',
-				exclusions: ['/path/to/source/folder/**/.DS_Store', '/path/to/source/folder/**/Thumbs.db', 'dist/tmp'],
+				exclusions: ['get_stops.js', '**/.DS_Store', '**/Thumbs.db', 'dist/tmp'],
 				server_sep: '/'
 			}
 		},
@@ -87,12 +95,13 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks("grunt-remove-logging");
-    grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-useref');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
+	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-sftp-deploy');
 	
-	grunt.registerTask('default', ['clean', 'copy', 'requirejs', 'removelogging',  'uglify', 'useref']);
+	grunt.registerTask('default', ['clean', 'copy', 'compass', 'requirejs', 'removelogging',  'uglify', 'useref']);
 	grunt.registerTask('deploy', ['clean', 'copy', 'requirejs', 'removelogging', 'uglify', 'useref', 'sftp-deploy']);
 
 

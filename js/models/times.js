@@ -8,7 +8,13 @@ define(["backbone"], function(Backbone){
 
 	return Backbone.Collection.extend({
 
-		//model : Time,
+    initialize: function(stopID){
+      if(stopID){
+        this.stopID = stopID
+      } else {
+        throw('You must include a stop ID');
+      }
+    },
 
 		stopID : null,
 

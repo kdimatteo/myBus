@@ -29,7 +29,6 @@ define(["utils/messagebus", "text!templates/nav.html", "backbone", "mustache"], 
 			$("#btnInbound").removeClass("active");
 			$("#btnOutbound").removeClass("active");
 			$("#" + e.currentTarget.id).addClass("active");
-
 		},
 
 		getNavStatus: function(){

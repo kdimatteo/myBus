@@ -1,8 +1,8 @@
 /**
  * @todo simplify on inbound + outbound views, ended up being the same anyway
  */
-define(["views/mainnav", "views/inbound", "views/outbound", "models/times", "utils/messagebus"],
-    function(MainNavView, InboundView, OutboundView, TimesCollection, MessageBus){
+define(["views/mainnav", "views/list", "models/times", "utils/messagebus"],
+    function(MainNavView, ListView, TimesCollection, MessageBus){
 
     "use strict";
     
@@ -19,16 +19,42 @@ define(["views/mainnav", "views/inbound", "views/outbound", "models/times", "uti
         },
 
         initialize: function(){
-
             MessageBus.on("ChangePage", function(args){
                 this.navigate(args.hash, {trigger:true});
                 $("#timesContainer").empty();
-                $("#timesContainer").html("<div style='text-align:center; padding-top:30px;'><img src='i/loading.gif'></div>");
-                
+                $("#timesContainer").addClass("loading");                
             }, this);
-
         },
 
+
+        addNav: function(mode){
+            if(this.mainNav === null){
+                this.mainNav = new MainNavView({el:"#navContainer", mode:mode});
+                this.mainNav.render();
+            }
+        },
+
+        addRefresh: function(collection){
+            this.refresh = setInterval(function(){
+                collection.fetch();
+            }, 30000);
+        },
+
+        switchView: function(newView){
+            if (this.currentView !== undefined && this.currentView !== newView){
+                this.currentView = newView;
+                clearInterval(this.refresh);
+            }
+        },
+
+        /**
+         * routes
+         * ------------------------------------------------------------------------------
+         */
+        
+        /**
+         * init the UI
+         */
         main: function(){
             var now = new Date();
             if(now.getHours() >= 15){
@@ -38,57 +64,28 @@ define(["views/mainnav", "views/inbound", "views/outbound", "models/times", "uti
             }
         },
 
-        addNav: function(mode){
-            if(this.mainNav === null){
-                this.mainNav = new MainNavView({el:"#navContainer", mode:mode});
-                this.mainNav.render();
-            }
-        },
-
-        switchView: function(newView){
-            if (this.currentView !== undefined && this.currentView !== newView){
-                //this.currentView.undelegateEvents();
-                this.currentView = newView;
-                clearInterval(this.refresh);
-            }
-        },
-
         /**
          * need stopID:
-         * @see http://proximobus.appspot.com/agencies/mbta/routes/92/stops.json
+         * @see http://proximobus.appspot.com/agencies/mbta/routes/93/stops.json
          *
          */
         showOutbound: function(){
-            var timesCollection = new TimesCollection();
-            timesCollection.stopID = "16540"; // 92 @ franklin st @ washinton st
-            
-            var timesView = new OutboundView({el:"#timesContainer", collection:timesCollection});
+            var timesCollection = new TimesCollection("06548"); // milk & devonshire
+            var timesView = new ListView({el:"#timesContainer", collection:timesCollection});
             timesCollection.fetch();
-
             this.switchView(timesView);
-
-            this.refresh = setInterval(function(){
-                timesCollection.fetch();
-            }, 30000);
-
             this.addNav("outbound");
-            
+            this.addRefresh();
         },
 
         showInbound: function(){
-            var timesCollection = new TimesCollection();
-            timesCollection.stopID = "02848";
-
-            var timesView = new InboundView({el:"#timesContainer", collection:timesCollection});
+            var timesCollection = new TimesCollection("02848");
+            var timesView = new ListView({el:"#timesContainer", collection:timesCollection});
             timesCollection.fetch();
 
             this.switchView(timesView);
-
-            this.refresh = setInterval(function(){
-                timesCollection.fetch();
-            }, 30000);
-
             this.addNav("inbound");
+            this.addRefresh();
         }
 
 	});

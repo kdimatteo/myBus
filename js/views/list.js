@@ -3,18 +3,12 @@
  * @file /js/
  * @fileoverview A View
  * @author Keith DiMatteo
- * @todo merge with inbound view, ended up being the same anyway
  */
 
 define(["backbone"], function(Backbone){
-
 	"use strict";
 		
 	return Backbone.View.extend({
-
-		events: {
-			
-		},
 
 		initialize: function(){
 			this.collection.bind("reset", this.render, this);
@@ -31,7 +25,7 @@ define(["backbone"], function(Backbone){
 
 		render: function(){
 			var myList = this.genList();
-			//console.log(this.collection.toJSON());
+			$("#timesContainer").removeClass("loading");
 			this.$el.html(myList);
 			return this;
 		}
