@@ -14,6 +14,10 @@ module.exports = function(grunt) {
                 src: 'index.html',
                 dest: 'dist/index.html',
             },
+            img: {
+                src: 'i/*.png',
+                dest: 'dist/'
+            },
             config: {
                 src: '.htaccess',
                 dest: 'dist/.htaccess',

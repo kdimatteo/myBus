@@ -11,21 +11,22 @@
   "license": "BSD",
   "readmeFilename": "README.md",
   "devDependencies": {
+    "JSONStream": "~0.9.0",
+    "colors": "~0.6.2",
+    "compass": "~0.1.0",
+    "event-stream": "~3.1.7",
     "grunt": "~0.4.2",
-    "grunt-useref": "0.0.16",
-    "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-clean": "~0.5.0",
-    "grunt-remove-logging": "~0.2.0",
-    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-compass": "^1.0.1",
+    "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-hashres": "~0.4.1",
+    "grunt-manifest": "git://github.com/gunta/grunt-manifest",
+    "grunt-remove-logging": "~0.2.0",
     "grunt-scp": "~0.1.6",
     "grunt-sftp-deploy": "0.0.11",
-    "request": "~2.44.0",
-    "JSONStream": "~0.9.0",
-    "event-stream": "~3.1.7",
-    "compass": "~0.1.0",
-    "grunt-manifest": "git://github.com/gunta/grunt-manifest",
-    "grunt-hashres": "~0.4.1",
-    "colors": "~0.6.2"
+    "grunt-useref": "0.0.16",
+    "request": "~2.44.0"
   }
 }
