@@ -4,16 +4,10 @@ var require = {
     //deps: ['main'],
 
     paths: {
-
-        jquery:         'vendor/jquery-1.8.2.min',
-
-        underscore:     'vendor/underscore-min',
-
-        backbone:       'vendor/backbone-min',
-
-        mustache:      'vendor/mustache'
-
-
+        jquery:         'vendor/jquery/jquery',
+        underscore:     'vendor/lodash/lodash',
+        backbone:       'vendor/backbone/backbone',
+        mustache:       'vendor/mustache/mustache'
     },
 
     // Shim those modules that are not set up for AMD
