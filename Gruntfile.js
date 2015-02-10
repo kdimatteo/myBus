@@ -35,7 +35,7 @@ module.exports = function(grunt) {
                     out: "dist/js/app.min.js",
                     preserveLicenseComments: false,
                     wrap:true,
-                    include: 'vendor/require.js'
+                    include: 'vendor/requirejs/require.js'
 
                 }
             }
