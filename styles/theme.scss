@@ -45,6 +45,12 @@ ul.times li{
 	color:#373737;
 }
 
+#alertsContainer{
+	h1 { text-transform: uppercase; }
+	h1, pre { padding:3px; }
+	background: #EAD706;
+}
+
 .loading {
 	background: inline-image("loading.gif");
 	background-position: center;

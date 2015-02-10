@@ -133,7 +133,13 @@ module.exports = function(grunt) {
                 exclusions: ['get_stops.js', '**/.DS_Store', '**/Thumbs.db', 'dist/tmp'],
                 server_sep: '/'
             }
-        }
+        },
+
+        watch: {
+            files: ['js/models/*.js', 'js/views/*.js', 'js/*.js', '**.html', 'styles/*.scss'],
+            tasks: ['watchtask']
+        },
+
     
     });
 
@@ -147,8 +153,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-manifest');
     grunt.loadNpmTasks('grunt-hashres');
     grunt.loadNpmTasks('grunt-sftp-deploy');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     
     grunt.registerTask('default', ['clean', 'copy', 'compass', 'requirejs', 'removelogging', 'uglify', 'hashres', 'useref']);
     grunt.registerTask('deploy', ['clean', 'copy', 'compass', 'requirejs', 'removelogging', 'uglify', 'hashres', 'manifest', 'useref', 'sftp-deploy']);
+    grunt.registerTask('watchtask', ['copy', 'compass', 'requirejs', 'useref']);
 
 };

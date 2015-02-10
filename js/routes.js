@@ -1,8 +1,8 @@
 /**
  * @todo simplify on inbound + outbound views, ended up being the same anyway
  */
-define(["views/mainnav", "views/list", "models/times", "utils/messagebus"],
-    function(MainNavView, ListView, TimesCollection, MessageBus){
+define(["views/mainnav", "views/list", "views/servicealerts", "models/times", "models/alerts", "utils/messagebus"],
+    function(MainNavView, ListView, ServiceAlertsView, TimesCollection, ServiceAlertsCollection, MessageBus){
 
     "use strict";
     
@@ -19,6 +19,7 @@ define(["views/mainnav", "views/list", "models/times", "utils/messagebus"],
         },
 
         initialize: function(){
+            this.addAlerts();
             MessageBus.on("ChangePage", function(args){
                 this.navigate(args.hash, {trigger:true});
                 $("#timesContainer").empty();
@@ -26,6 +27,11 @@ define(["views/mainnav", "views/list", "models/times", "utils/messagebus"],
             }, this);
         },
 
+        addAlerts:function(){
+            serviceAlertsCollection = new ServiceAlertsCollection();
+            serviceAlertsView = new ServiceAlertsView({el:"#alertsContainer", collection:serviceAlertsCollection});
+            serviceAlertsCollection.fetch();
+        },
 
         addNav: function(mode){
             if(this.mainNav === null){
