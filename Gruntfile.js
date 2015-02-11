@@ -136,7 +136,7 @@ module.exports = function(grunt) {
         },
 
         watch: {
-            files: ['js/models/*.js', 'js/views/*.js', 'js/*.js', '**.html', 'styles/*.scss'],
+            files: ['js/models/*.js', 'js/views/*.js', 'js/*.js', 'js/templates/*.html', 'styles/*.scss'],
             tasks: ['watchtask']
         },
 
