@@ -5,8 +5,8 @@
     ],
 
     function(AppRouter) {
-        var appRouter = new AppRouter();
-		Backbone.history.start();
+      var appRouter = new AppRouter();
+		  Backbone.history.start();
     });
 
 }(require));
