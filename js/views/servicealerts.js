@@ -8,15 +8,16 @@ define(["backbone", "mustache", "text!templates/alert.html"], function(Backbone,
     },
 
     render: function(){
-      var o = _.first(this.collection.toJSON()[0]['alerts']);
-      var utcSeconds = parseInt(o.last_modified_dt);
-      var d = new Date(0);
-      
-      d.setUTCSeconds(utcSeconds);
-      o.last_modified_date = d.toLocaleString();
+      if(this.collection.toJSON()[0]['alerts']){
+        var o = _.first(this.collection.toJSON()[0]['alerts']);
+        var utcSeconds = parseInt(o.last_modified_dt);
+        var d = new Date(0);
+        d.setUTCSeconds(utcSeconds);
+        o.last_modified_date = d.toLocaleString();
 
-      var template = Mustache.render(tplAlert, o);
-      this.$el.html(template);
+        var template = Mustache.render(tplAlert, o);
+        this.$el.html(template);
+      }
     }
 
   });

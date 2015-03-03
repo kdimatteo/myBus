@@ -1,3 +1,5 @@
+$darkgray: #373737;
+$pink: #EC068D;
 * {
 	border:0px;
 	margin:0px;
@@ -9,18 +11,28 @@ html, body {
 	font-family: 'Exo 2', sans-serif;
 }
 
+.ios-statusbar {
+	background: $pink;
+	height:20px;
+	width:100%;
+}
+
 ul.mainNav {
 	margin:0;
 	width:100%;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
 }
 
 ul.mainNav li {
-	background:#373737;
+	background: $darkgray;
 	color:#666;
 	height:40px;
 	padding:20px 0 0 0;
-	margin:-2px;
+	width:50%;
 	flex-grow:1;
 	text-align:center;
 	cursor:pointer;
